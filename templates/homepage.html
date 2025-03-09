@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <!-- external css file -->
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+
+</head>
+
+<body>
+    <div class="main_section">
+
+        <!-- Navbar sections -->
+        <div class="nav">
+            <div class="logo">
+                <span>
+                    Book Store
+                </span>
+            </div>
+            <div class="ul">
+                <li class="li">Home</li>
+                <li class="li">Add Book</li>
+            </div>
+        </div>
+
+        <!-- Main Section -->
+        <div class="book_info">
+            <span>
+                Book Information
+            </span>
+        </div>
+
+        <!-- <main class="main">
+            <div class="card_one all">
+                
+    
+                <div class="book_data">
+                    <h3>
+                        book title
+                    </h3>
+    
+                    <div class="div">
+                        <div class="img_card">
+                            <img src="" alt="" class="img">
+                        </div>
+    
+                        <p class="descriptions">
+                            This is a book about
+                        </p>
+
+                        <span>
+                            Book Publish Date: 
+                        </span>
+                    </div>
+            </div>
+            </div>
+
+            <div class="card_two all">
+                
+    
+                <div class="book_data">
+                    <h3>
+                        book title
+                    </h3>
+    
+                    <div class="div">
+                        <div class="img_card">
+                            <img src="" alt="" class="img">
+                        </div>
+    
+                        <p class="descriptions">
+                            This is a book about
+                        </p>
+                    </div>
+            </div>
+            </div>
+
+            <div class="card_three all">
+                
+    
+                <div class="book_data">
+                    <h3>
+                        book title
+                    </h3>
+    
+                    <div class="div">
+                        <div class="img_card">
+                            <img src="" alt="" class="img">
+                        </div>
+    
+                        <p class="descriptions">
+                            This is a book about
+                        </p>
+                    </div>
+            </div>
+            </div>
+
+            <div class="card_four all">
+               
+    
+                <div class="book_data">
+                    <h3>
+                        book title
+                    </h3>
+    
+                    <div class="div">
+                        <div class="img_card">
+                            <img src="" alt="" class="img">
+                        </div>
+    
+                        <p class="descriptions">
+                            This is a book about
+                        </p>
+                    </div>
+            </div>
+            </div>
+
+
+            <div class="card_five all">
+                
+    
+                <div class="book_data">
+                    <h3>
+                        book title
+                    </h3>
+    
+                    <div class="div">
+                        <div class="img_card">
+                            <img src="" alt="" class="img">
+                        </div>
+    
+                        <p class="descriptions">
+                            This is a book about
+                        </p>
+                    </div>
+            </div>
+            </div>
+        </main> -->
+
+        <div class="card_section">
+        {% for book in books %}    
+            <div class="card">
+                <p class="title">
+                    {{ book.title }}
+                </p>
+                <p class="author_name">
+                    {{ book.author|title }}
+                </p>
+                <!-- <img src="https://picsum.photos/200/300/?blur
+                " alt="" class="img"> -->
+
+                <p class="description">
+                    {{ book.discriptions}}
+                </p>
+
+                <p class="published_year">
+                    Book Publish Date: <span class="year">
+                        {{ book.published_year }}
+                    </span>
+                </p>
+            </div>
+        {% endfor %}
+
+
+            <div class="card">
+                <p class="title">
+                    Book Titel
+                </p>
+                <p class="author_name">
+                    Author Name
+                </p>
+                <!-- <img src="https://picsum.photos/200/300/?blur
+                " alt="" class="img"> -->
+
+                <p class="description">
+                    This is a book about
+                </p>
+
+                <p class="published_year">
+                    Book Publish Date: <span class="year">
+                        2021
+                    </span>
+                </p>
+            </div>
+
+
+
+            <div class="card">
+                <p class="title">
+                    Book Titel
+                </p>
+                <p class="author_name">
+                    Author Name
+                </p>
+                <!-- <img src="https://picsum.photos/200/300/?blur
+                " alt="" class="img"> -->
+
+                <p class="description">
+                    This is a book about
+                </p>
+
+                <p class="published_year">
+                    Book Publish Date: <span class="year">
+                        2021
+                    </span>
+                </p>
+            </div>
+
+
+
+            <div class="card">
+                <p class="title">
+                    Book Titel
+                </p>
+                <p class="author_name">
+                    Author Name
+                </p>
+                <!-- <img src="https://picsum.photos/200/300/?blur
+                " alt="" class="img"> -->
+
+                <p class="description">
+                    This is a book about
+                </p>
+
+                <p class="published_year">
+                    Book Publish Date: <span class="year">
+                        2021
+                    </span>
+                </p>
+            </div>
+
+
+            <div class="card">
+                <p class="title">
+                    Book Titel
+                </p>
+                <p class="author_name">
+                    Author Name
+                </p>
+                <!-- <img src="https://picsum.photos/200/300/?blur
+                " alt="" class="img"> -->
+
+                <p class="description">
+                    This is a book about
+                </p>
+
+                <p class="published_year">
+                    Book Publish Date: <span class="year">
+                        2021
+                    </span>
+                </p>
+            </div>
+
+
+            <div class="card">
+                <p class="title">
+                    Book Titel
+                </p>
+                <p class="author_name">
+                    Author Name
+                </p>
+                <!-- <img src="https://picsum.photos/200/300/?blur
+                " alt="" class="img"> -->
+
+                <p class="description">
+                    This is a book about
+                </p>
+
+                <p class="published_year">
+                    Book Publish Date: <span class="year">
+                        2021
+                    </span>
+                </p>
+            </div>
+
+
+            <div class="card">
+                <p class="title">
+                    Book Titel
+                </p>
+                <p class="author_name">
+                    Author Name
+                </p>
+                <!-- <img src="https://picsum.photos/200/300/?blur
+                " alt="" class="img"> -->
+
+                <p class="description">
+                    This is a book about
+                </p>
+
+                <p class="published_year">
+                    Book Publish Date: <span class="year">
+                        2021
+                    </span>
+                </p>
+            </div>
+
+
+            <div class="card">
+                <p class="title">
+                    Book Titel
+                </p>
+                <p class="author_name">
+                    Author Name
+                </p>
+                <!-- <img src="https://picsum.photos/200/300/?blur
+                " alt="" class="img"> -->
+
+                <p class="description">
+                    This is a book about
+                </p>
+
+                <p class="published_year">
+                    Book Publish Date: <span class="year">
+                        2021
+                    </span>
+                </p>
+            </div>
+
+
+            <div class="card">
+                <p class="title">
+                    Book Titel
+                </p>
+                <p class="author_name">
+                    Author Name
+                </p>
+
+                <p class="description">
+                    This is a book about
+                </p>
+
+                <p class="published_year">
+                    Book Publish Date: 2021
+                </p>
+            </div>
+
+            <div class="card">
+                <p class="title">
+                    Book Titel
+                </p>
+                <p class="author_name">
+                    Author Name
+                </p>
+
+                <p class="description">
+                    This is a book about
+                </p>
+
+                <p class="published_year">
+                    Book Publish Date: 2021
+                </p>
+            </div>
+
+            <div class="card">
+                <p class="title">
+                    Book Titel
+                </p>
+                <p class="author_name">
+                    Author Name
+                </p>
+
+                <p class="description">
+                    This is a book about
+                </p>
+
+                <p class="published_year">
+                    Book Publish Date: 2021
+                </p>
+            </div>
+
+            <div class="card">
+                <p class="title">
+                    Book Titel
+                </p>
+                <p class="author_name">
+                    Author Name
+                </p>
+
+                <p class="description">
+                    This is a book about
+                </p>
+
+                <p class="published_year">
+                    Book Publish Date: 2021
+                </p>
+            </div>
+
+
+            <div class="card">
+                <p class="title">
+                    Book Titel
+                </p>
+                <p class="author_name">
+                    Author Name
+                </p>
+
+                <p class="description">
+                    This is a book about
+                </p>
+
+                <p class="published_year">
+                    Book Publish Date: 2021
+                </p>
+            </div>
+
+
+            <div class="card">
+                <p class="title">
+                    Book Titel
+                </p>
+                <p class="author_name">
+                    Author Name
+                </p>
+
+                <p class="description">
+                    This is a book about
+                </p>
+
+                <p class="published_year">
+                    Book Publish Date: 2021
+                </p>
+            </div>
+        </div>
+        <!-- <div class="container">
+            <div class="header"> navbar </div>
+            <div class="menu"> menu </div>
+            <div class="content"> content </div>
+            <div class="footer"> footer </div>
+        </div> -->
+    </div>
+</body>
+
+</html>
