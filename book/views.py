@@ -6,9 +6,9 @@ from .models import Book
 def homepage(request):
     books = Book.objects.all()
     
-    # context = {
-    #     'books': books
-    # }
-    # print(books)
-    
     return render (request, 'homepage.html', {'books': books})
+
+
+def add_book(request):
+    
+    return render(request, 'add_book.html')

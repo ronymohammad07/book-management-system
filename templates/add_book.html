@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- external css link -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/add_book.css' %}">
+
+    <!-- extend remixicon icon link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- section -->
+    <div class="section">
+        <!-- Navbar sections -->
+        <div class="nav">
+            <div class="logo">
+                <span>
+                    Book Store
+                </span>
+            </div>
+            <div class="ul">
+                <li class="li">Home</li>
+                <!-- <li class="li">Add Book</li> -->
+            </div>
+        </div>
+
+        <!-- main section -->
+        <div class="main_section">
+
+
+
+        </div> 
+        <!-- book info Section -->
+        <div class="book_info">
+
+            <i class="ri-file-info-line"></i>
+            <span>
+                Book Information
+            </span>
+        </div>
+
+        <!-- form section -->
+        <form action="" method="" class="form">
+            <div class="title">
+
+                <input type="text" name="book_name" id="book_name" placeholder="Enter Book Title">
+            </div>
+
+            <div class="author">
+                <input type="text" name="author_name" id="author_name" placeholder="Enter Author Name">
+            </div>
+
+            <div class="description">
+                <input type="" name="description" id="description" placeholder="Enter Description">
+            </div>
+
+            <div class="published_year">
+                <input type="datetime" name="published_year" id="published_year" placeholder="Enter Published Year">
+            </div>
+        </form>
+
+        <!-- submit button and cancel button -->
+        <div class="button_div">
+            <!-- submit button -->
+
+            <button class="button submite" id="button">
+                Submit
+
+            </button>
+            <!-- cancel button -->
+            <button class="button cancel" id="button">
+                <!-- <i class="ri-close-circle-fill"></i> -->
+                <span>
+                    Cancel
+                </span>
+
+            </button>
+
+
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Book Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    </div>
+</body>
+
+</html>

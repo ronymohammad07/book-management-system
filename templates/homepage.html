@@ -8,6 +8,9 @@
 
     <!-- external css file -->
     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+
+
 
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
 
@@ -36,115 +39,10 @@
             </span>
         </div>
 
-        <!-- <main class="main">
-            <div class="card_one all">
-                
-    
-                <div class="book_data">
-                    <h3>
-                        book title
-                    </h3>
-    
-                    <div class="div">
-                        <div class="img_card">
-                            <img src="" alt="" class="img">
-                        </div>
-    
-                        <p class="descriptions">
-                            This is a book about
-                        </p>
-
-                        <span>
-                            Book Publish Date: 
-                        </span>
-                    </div>
-            </div>
-            </div>
-
-            <div class="card_two all">
-                
-    
-                <div class="book_data">
-                    <h3>
-                        book title
-                    </h3>
-    
-                    <div class="div">
-                        <div class="img_card">
-                            <img src="" alt="" class="img">
-                        </div>
-    
-                        <p class="descriptions">
-                            This is a book about
-                        </p>
-                    </div>
-            </div>
-            </div>
-
-            <div class="card_three all">
-                
-    
-                <div class="book_data">
-                    <h3>
-                        book title
-                    </h3>
-    
-                    <div class="div">
-                        <div class="img_card">
-                            <img src="" alt="" class="img">
-                        </div>
-    
-                        <p class="descriptions">
-                            This is a book about
-                        </p>
-                    </div>
-            </div>
-            </div>
-
-            <div class="card_four all">
-               
-    
-                <div class="book_data">
-                    <h3>
-                        book title
-                    </h3>
-    
-                    <div class="div">
-                        <div class="img_card">
-                            <img src="" alt="" class="img">
-                        </div>
-    
-                        <p class="descriptions">
-                            This is a book about
-                        </p>
-                    </div>
-            </div>
-            </div>
-
-
-            <div class="card_five all">
-                
-    
-                <div class="book_data">
-                    <h3>
-                        book title
-                    </h3>
-    
-                    <div class="div">
-                        <div class="img_card">
-                            <img src="" alt="" class="img">
-                        </div>
-    
-                        <p class="descriptions">
-                            This is a book about
-                        </p>
-                    </div>
-            </div>
-            </div>
-        </main> -->
 
         <div class="card_section">
-        {% for book in books %}    
+            {% for book in books %}
+
             <div class="card">
                 <p class="title">
                     {{ book.title }}
@@ -156,7 +54,7 @@
                 " alt="" class="img"> -->
 
                 <p class="description">
-                    {{ book.discriptions}}
+                    {{ book.discriptions }}
                 </p>
 
                 <p class="published_year">
@@ -165,7 +63,8 @@
                     </span>
                 </p>
             </div>
-        {% endfor %}
+
+            {% endfor %}
 
 
             <div class="card">
@@ -428,12 +327,15 @@
                 </p>
             </div>
         </div>
-        <!-- <div class="container">
-            <div class="header"> navbar </div>
-            <div class="menu"> menu </div>
-            <div class="content"> content </div>
-            <div class="footer"> footer </div>
-        </div> -->
+
+        <!-- Footer section -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 Book Store. All rights reserved.</p>
+            </div>
+        </footer>
+
+
     </div>
 </body>
 

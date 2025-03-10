@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+/* section */
+.section {
+    width: 100vw;
+    height: 100vh;
+    /* position: relative; */
+}
+
+/* navbar section */
+
+.nav {
+    /* position: fixed;
+    top: 0; */
+    width: 86%;
+    background-color: #1F7D53;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    border-radius: 5px;
+    /* margin-top: 0.5rem; */
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 0.5rem; You can remove this if not needed */
+    /* z-index: 1000; */
+    /* Ensures it stays on top of other elements */
+}
+
+/* navbar logo */
+
+.logo {
+    font-size: 2rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/* navbar ul */
+.ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: none;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/* main section */
+.main_section {
+    width: 85%;
+    margin: 1.2rem auto;
+}
+
+/* back button */
+
+ .back_circle{
+    width: 50px;
+    height: 50px;
+    background-color: #27391C;
+    color: wheat;
+    font-weight: bolder;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 2rem;
+    /* z-index: 10; */
+} 
+
+
+/* Book information */
+.book_info {
+    margin: 0 auto;
+    width: 60%;
+    background-color: #27391C;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    /* margin-top: 90px; */
+    border-radius: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.book_info>span{
+    font-size: 1.3rem;
+}
+
+.book_info>i {
+    padding: 0 3px 0 0.2rem;
+    color: white;
+}
+
+/* form section */
+form {
+    /* width: 100%; */
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form>div>input {
+    width: 50vw;
+    height: 8vh;
+    margin-top: 1.2rem;
+    /* padding: 0.7rem 0; */
+    border-radius: 5px;
+    border-style: none;
+    border: 2px solid #27391C;
+    padding: 0 2rem;
+    font-size: 1.1rem;
+    /* text-wrap: bold; */
+}
+
+/* form>div>input::placeholder{
+    padding: 0 2rem;
+} */
+
+form>div>input:focus {
+    outline: 2px solid #27391C;
+    /* outline-offset: 0.5rem; */
+    cursor: text;
+
+}
+
+form>.description>input{
+    height: 14vh;
+    /* padding: 0 2rem 0 2rem; */
+}
+
+
+/* submit button and cancel button  */
+.button_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* submit button and cancel button */
+.button_div>button {
+    width: 10vw;
+    height: 6vh;
+    background-color: #18230F;
+    color: wheat;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.button_div>button:hover {
+    background-color: #27391C;
+}
+
+/* footer section */
+.footer {
+    background-color: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-content {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+
+
+/* Responsive section */
+
+@media screen and ( max-width: 768px){
+
+    /* Main section */
+    .section{
+        width: 100%;
+        height: 100%;
+
+    }
+
+    /* navbar section */
+     .nav{
+        width: 95%;
+        height: 60px;
+        /* padding: 0 10px; */
+    }
+
+    /* navbar logo */
+    .logo{
+        font-size: 1.5rem;
+    }
+    /* back circle */
+    .added_book{
+        display: none;
+    }
+
+
+    /* book information */
+    .book_info{
+        width: 95%;
+        font-size: 1.3rem;
+        height: 50px;
+    }
+
+
+    /* form  */
+
+    form>div>input{
+        width: 95%;
+    }
+
+
+    /* submit button and cancel button */
+
+    .button_div>button{
+        width: 22vw;
+        /* padding: 0 10px; */
+    }
+
+
+    
+}
