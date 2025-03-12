@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Card</title>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/success.css' %}">
+</head>
+
+<body>
+    <!-- Navbar sections -->
+    <div class="nav">
+        <a href="/">
+            <div class="logo">
+                <span>
+                    Book Store
+                </span>
+            </div>
+        </a>
+        <div class="ul">
+            <a href="/">
+                <li class="li">Home</li>
+
+            </a>
+
+            <a href="add_book">
+                <li class="li">Add Book</li>
+
+            </a>
+        </div>
+    </div>
+
+    <div class="card_section">
+        <div class="card">
+            <div class="icon">✅</div>
+            <h2>Success!</h2>
+            <p>Your book has been submitted successfully.</p>
+            <a href="/">
+                <button>Go Home</button>
+            </a>
+            <a href="add_book">
+                <button>Add Another Book</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Book Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

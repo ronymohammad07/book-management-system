@@ -19,12 +19,17 @@
         <!-- Navbar sections -->
         <div class="nav">
             <div class="logo">
-                <span>
-                    Book Store
-                </span>
+                <a href='/'>
+                    <span>
+                        Book Store
+                    </span>
+                </a>
             </div>
             <div class="ul">
-                <li class="li">Home</li>
+                <a href="/">
+                    <li class="li">Home</li>
+    
+                    </a>
                 <!-- <li class="li">Add Book</li> -->
             </div>
         </div>
@@ -45,44 +50,84 @@
         </div>
 
         <!-- form section -->
-        <form action="" method="" class="form">
+        {% comment %} <form action="" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="title">
+                    <input type="text" name="title" id="" placeholder="name" required>
+                </label>
+            </div>
+        
+            <div>
+                <label for="author">
+                    <input type="text" name="author" id="" placeholder="name" required>
+                </label>
+            </div>
+        
+        
+            <div>
+                <label for="description"> 
+                    <input  type="text" name="description" id="" placeholder="name" required>
+                </label>
+            </div>
+        
+            <div>
+                <label for="published_year">
+                    <input type="text" name="published_year" id="" placeholder="name" required>
+                </label>
+            </div>
+        
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form> {% endcomment %}
+
+
+        <form action="" method="post" class="form">
+            {% csrf_token %}
+        
             <div class="title">
-
-                <input type="text" name="book_name" id="book_name" placeholder="Enter Book Title">
+                <label for="book_name"></label>
+                <input type="text" name="title" id="book_name" placeholder="Enter Book Title" required>
             </div>
-
+        
             <div class="author">
-                <input type="text" name="author_name" id="author_name" placeholder="Enter Author Name">
+                <label for="author"></label>
+                <input type="text" name="author" id="author" placeholder="Enter Author Name" required>
             </div>
-
+        
             <div class="description">
-                <input type="" name="description" id="description" placeholder="Enter Description">
+                <label for="description"></label>
+                <input type="text" name="description" id="description" placeholder="Enter Description" required>
             </div>
-
+        
             <div class="published_year">
-                <input type="datetime" name="published_year" id="published_year" placeholder="Enter Published Year">
+                <label for="published_year"></label>
+                <input type="number" name="published_year" id="published_year" placeholder="Enter Published Year" required min="1900">
             </div>
-        </form>
-
-        <!-- submit button and cancel button -->
+        
+            <!-- submit button and cancel button -->
         <div class="button_div">
             <!-- submit button -->
-
-            <button class="button submite" id="button">
-                Submit
-
-            </button>
+                <button type='submit' class="button submit" id="button">
+                    Submit
+    
+                </button>
             <!-- cancel button -->
-            <button class="button cancel" id="button">
-                <!-- <i class="ri-close-circle-fill"></i> -->
-                <span>
-                    Cancel
-                </span>
-
-            </button>
-
+                <a href='add_book'>
+                    <p class=" cancel" id="button">
+                        <!-- <i class="ri-close-circle-fill"></i> -->
+                        <span>
+                            Refresh
+                        </span>    
+                    </p>
+                </a>    
 
         </div>
+        </form>
+        
+
+        
     </div>
 
     <!-- Footer section -->

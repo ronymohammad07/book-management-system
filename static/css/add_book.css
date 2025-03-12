@@ -5,7 +5,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
+a{
+    text-decoration: none;
+    color: wheat;
+}
+a:visited{
+    color: white;
+}
 
 
 /* section */
@@ -18,8 +24,10 @@
 /* navbar section */
 
 .nav {
-    /* position: fixed;
-    top: 0; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     width: 86%;
     background-color: #1F7D53;
     color: white;
@@ -29,7 +37,7 @@
     height: 60px;
     padding: 0 20px;
     border-radius: 5px;
-    /* margin-top: 0.5rem; */
+    margin-top: 0.5rem;
     margin-left: auto;
     margin-right: auto;
     /* margin-top: 0.5rem; You can remove this if not needed */
@@ -53,11 +61,12 @@
     list-style: none;
     font-weight: bolder;
     cursor: pointer;
+    
 }
 
 /* main section */
 .main_section {
-    width: 85%;
+    width: 86%;
     margin: 1.2rem auto;
 }
 
@@ -81,8 +90,8 @@
 
 /* Book information */
 .book_info {
-    margin: 0 auto;
-    width: 60%;
+    margin: 5.4rem auto 0 auto;
+    width: 85%;
     background-color: #27391C;
     color: white;
     font-size: 1.1rem;
@@ -150,11 +159,11 @@ form>.description>input{
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin: 2rem 0;
+    margin: 2rem 0;-
 }
 
 /* submit button and cancel button */
-.button_div>button {
+.button {
     width: 10vw;
     height: 6vh;
     background-color: #18230F;
@@ -166,6 +175,21 @@ form>.description>input{
     cursor: pointer;
 }
 
+.cancel {
+    width: 10vw;
+    height: 6vh;
+    background-color: #18230F;
+    color: wheat;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .button_div>button:hover {
     background-color: #27391C;
 }
@@ -173,11 +197,12 @@ form>.description>input{
 /* footer section */
 .footer {
     background-color: #f8f9fa;
-    padding: 15px;
+    /* padding: 15px; */
+    padding: 1.4rem;
     text-align: center;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
-    bottom: 0;
+    /* bottom: 0; */
 }
 
 .footer-content {

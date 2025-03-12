@@ -8,11 +8,16 @@
 
     <!-- external css file -->
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
 
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
 
-    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+<link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+
 
 </head>
 
@@ -22,18 +27,29 @@
         <!-- Navbar sections -->
         <div class="nav">
             <div class="logo">
+                <a href='/'>
                 <span>
                     Book Store
                 </span>
+            </a>
             </div>
             <div class="ul">
+                <a href="/">
                 <li class="li">Home</li>
-                <li class="li">Add Book</li>
+
+                </a>
+
+                <a href="{% url 'add_book' %}">
+                    <li class="li">Add Book</li>
+
+                </a>
             </div>
         </div>
 
         <!-- Main Section -->
         <div class="book_info">
+            <i class="ri-file-info-line"></i>
+
             <span>
                 Book Information
             </span>
@@ -42,290 +58,38 @@
 
         <div class="card_section">
             {% for book in books %}
+                <div class="card">
+                <!-- edit icon and delete icon -->
+                    <div class="edit_delete">
+                        <a href='{% url 'update_book' pk=book.pk %}'>
+                            <i class="ri-file-edit-fill icon-one"></i>
+                        </a>
 
-            <div class="card">
-                <p class="title">
-                    {{ book.title }}
-                </p>
-                <p class="author_name">
-                    {{ book.author|title }}
-                </p>
-                <!-- <img src="https://picsum.photos/200/300/?blur
-                " alt="" class="img"> -->
+                        <a href=''>
+                            <i class="ri-delete-bin-5-fill icon-two"></i>
+                        </a>    
+                    </div>
+                    <p class="title">
+                        {{ book.title|title }}
+                    </p>
+                    <p class="author_name">
+                        {{ book.author }}
+                    </p>
+                    <!-- <img src="https://picsum.photos/200/300/?blur
+                    " alt="" class="img"> -->
 
-                <p class="description">
-                    {{ book.discriptions }}
-                </p>
+                    <p class="description">
+                        {{ book.description }}
+                    </p>
 
-                <p class="published_year">
+                    <p class="published_year">
                     Book Publish Date: <span class="year">
                         {{ book.published_year }}
                     </span>
-                </p>
-            </div>
+                    </p>
+                </div>
 
             {% endfor %}
-
-
-            <div class="card">
-                <p class="title">
-                    Book Titel
-                </p>
-                <p class="author_name">
-                    Author Name
-                </p>
-                <!-- <img src="https://picsum.photos/200/300/?blur
-                " alt="" class="img"> -->
-
-                <p class="description">
-                    This is a book about
-                </p>
-
-                <p class="published_year">
-                    Book Publish Date: <span class="year">
-                        2021
-                    </span>
-                </p>
-            </div>
-
-
-
-            <div class="card">
-                <p class="title">
-                    Book Titel
-                </p>
-                <p class="author_name">
-                    Author Name
-                </p>
-                <!-- <img src="https://picsum.photos/200/300/?blur
-                " alt="" class="img"> -->
-
-                <p class="description">
-                    This is a book about
-                </p>
-
-                <p class="published_year">
-                    Book Publish Date: <span class="year">
-                        2021
-                    </span>
-                </p>
-            </div>
-
-
-
-            <div class="card">
-                <p class="title">
-                    Book Titel
-                </p>
-                <p class="author_name">
-                    Author Name
-                </p>
-                <!-- <img src="https://picsum.photos/200/300/?blur
-                " alt="" class="img"> -->
-
-                <p class="description">
-                    This is a book about
-                </p>
-
-                <p class="published_year">
-                    Book Publish Date: <span class="year">
-                        2021
-                    </span>
-                </p>
-            </div>
-
-
-            <div class="card">
-                <p class="title">
-                    Book Titel
-                </p>
-                <p class="author_name">
-                    Author Name
-                </p>
-                <!-- <img src="https://picsum.photos/200/300/?blur
-                " alt="" class="img"> -->
-
-                <p class="description">
-                    This is a book about
-                </p>
-
-                <p class="published_year">
-                    Book Publish Date: <span class="year">
-                        2021
-                    </span>
-                </p>
-            </div>
-
-
-            <div class="card">
-                <p class="title">
-                    Book Titel
-                </p>
-                <p class="author_name">
-                    Author Name
-                </p>
-                <!-- <img src="https://picsum.photos/200/300/?blur
-                " alt="" class="img"> -->
-
-                <p class="description">
-                    This is a book about
-                </p>
-
-                <p class="published_year">
-                    Book Publish Date: <span class="year">
-                        2021
-                    </span>
-                </p>
-            </div>
-
-
-            <div class="card">
-                <p class="title">
-                    Book Titel
-                </p>
-                <p class="author_name">
-                    Author Name
-                </p>
-                <!-- <img src="https://picsum.photos/200/300/?blur
-                " alt="" class="img"> -->
-
-                <p class="description">
-                    This is a book about
-                </p>
-
-                <p class="published_year">
-                    Book Publish Date: <span class="year">
-                        2021
-                    </span>
-                </p>
-            </div>
-
-
-            <div class="card">
-                <p class="title">
-                    Book Titel
-                </p>
-                <p class="author_name">
-                    Author Name
-                </p>
-                <!-- <img src="https://picsum.photos/200/300/?blur
-                " alt="" class="img"> -->
-
-                <p class="description">
-                    This is a book about
-                </p>
-
-                <p class="published_year">
-                    Book Publish Date: <span class="year">
-                        2021
-                    </span>
-                </p>
-            </div>
-
-
-            <div class="card">
-                <p class="title">
-                    Book Titel
-                </p>
-                <p class="author_name">
-                    Author Name
-                </p>
-
-                <p class="description">
-                    This is a book about
-                </p>
-
-                <p class="published_year">
-                    Book Publish Date: 2021
-                </p>
-            </div>
-
-            <div class="card">
-                <p class="title">
-                    Book Titel
-                </p>
-                <p class="author_name">
-                    Author Name
-                </p>
-
-                <p class="description">
-                    This is a book about
-                </p>
-
-                <p class="published_year">
-                    Book Publish Date: 2021
-                </p>
-            </div>
-
-            <div class="card">
-                <p class="title">
-                    Book Titel
-                </p>
-                <p class="author_name">
-                    Author Name
-                </p>
-
-                <p class="description">
-                    This is a book about
-                </p>
-
-                <p class="published_year">
-                    Book Publish Date: 2021
-                </p>
-            </div>
-
-            <div class="card">
-                <p class="title">
-                    Book Titel
-                </p>
-                <p class="author_name">
-                    Author Name
-                </p>
-
-                <p class="description">
-                    This is a book about
-                </p>
-
-                <p class="published_year">
-                    Book Publish Date: 2021
-                </p>
-            </div>
-
-
-            <div class="card">
-                <p class="title">
-                    Book Titel
-                </p>
-                <p class="author_name">
-                    Author Name
-                </p>
-
-                <p class="description">
-                    This is a book about
-                </p>
-
-                <p class="published_year">
-                    Book Publish Date: 2021
-                </p>
-            </div>
-
-
-            <div class="card">
-                <p class="title">
-                    Book Titel
-                </p>
-                <p class="author_name">
-                    Author Name
-                </p>
-
-                <p class="description">
-                    This is a book about
-                </p>
-
-                <p class="published_year">
-                    Book Publish Date: 2021
-                </p>
-            </div>
         </div>
 
         <!-- Footer section -->
@@ -337,6 +101,10 @@
 
 
     </div>
+
+
+ 
+
 </body>
 
 </html>

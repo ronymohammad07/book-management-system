@@ -5,6 +5,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color: wheat;
+}
+a:visited{
+    color: white;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -75,10 +83,12 @@ body {
     font-weight: bolder;
     margin-top: 90px;
     border-radius: 5px;
-    height: 30px;
+    height: 50px;
     display: flex;
     align-items: center;
     padding: 0 20px;
+    font-size: 1.1rem;
+
 }
 
 /* Main section */
@@ -107,8 +117,33 @@ body {
     grid-gap: 10px;
     margin-top: 2rem;
     cursor: pointer;
+    /* flex-direction: row-reverse; */
+    /* display: flex; */
     /* grid-template-rows: 50px auto 50px; */
 }
+
+/* <!-- edit icon and delete icon */
+.edit_delete{
+    color: rgb(196, 3, 3);
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 1.5rem;
+}
+
+/* .edit_delete .icon-one{
+    position: absolute;
+    left: 0;
+    top: 5px;
+    z-index: 100;
+}
+.edit_delete .icon-two{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    z-index: 100;
+} */
 
 .card:nth-child(odd) {
     background-color: #255F38;
@@ -124,9 +159,14 @@ body {
     color: white;
     border-radius: 5px;
     padding: 20px;
+    /* direction:  rtl; */
 
     /* height: 200px; */
 }
+
+/* .card:nth-child(odd):hover{
+    border: 2px solid #27391C;
+} */
 
 
 .card>.title {

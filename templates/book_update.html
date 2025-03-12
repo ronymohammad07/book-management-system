@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Book</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/book_update.css' %}"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Update Book: "{{ book.title }}"</h2>
+
+            <!-- Form to update the book details -->
+            <form method="POST">
+                {% csrf_token %}
+                
+                <div class="form-group">
+                    <label for="{{ form.title.id_for_label }}">Title:</label>
+                    <input type="text" name="title" value="{{ form.title.value }}" id="{{ form.title.id_for_label }}" required>
+                    {% if form.title.errors %}
+                        <div class="error-message">
+                            {% for error in form.title.errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ form.author.id_for_label }}">Author:</label>
+                    <input type="text" name="author" value="{{ form.author.value }}" id="{{ form.author.id_for_label }}" required>
+                    {% if form.author.errors %}
+                        <div class="error-message">
+                            {% for error in form.author.errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ form.description.id_for_label }}">Description:</label>
+                    <textarea name="description" id="{{ form.description.id_for_label }}" required>{{ form.description.value }}</textarea>
+                    {% if form.description.errors %}
+                        <div class="error-message">
+                            {% for error in form.description.errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ form.published_year.id_for_label }}">Published Year:</label>
+                    <input type="number" name="published_year" value="{{ form.published_year.value }}" id="{{ form.published_year.id_for_label }}" required>
+                    {% if form.published_year.errors %}
+                        <div class="error-message">
+                            {% for error in form.published_year.errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <button type="submit" class="submit-btn">Update Book</button>
+            </form>
+
+            <br>
+            <a href="{% url 'homepage' %}" class="back-link">Back to Book List</a>
+        </div>
+    </div>
+</body>
+</html>
