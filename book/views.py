@@ -61,3 +61,13 @@ def update_book(request, pk):
 
     # Render the template with the form
     return render(request, 'book_update.html', {'form': form, 'book': book})
+
+
+def delete_book(request, pk):
+    book = get_object_or_404(Book, pk=pk)
+    print(book)
+    
+    if book:
+        book.delete()
+        return render(request,'delete_success.html')
+    return render(request, 'homepage')
